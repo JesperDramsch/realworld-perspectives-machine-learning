@@ -9,6 +9,9 @@
 .. type: text
 -->
 
+**This is a workshop organised on December 2nd, during [Pydata Global 2022](/pydata/) with financial support by the [Software Sustainability Institute](https://software.ac.uk/).**
+*Get your [tickets here](/tickets/)*
+
 Numerous scientific disciplines have noticed a reproducibility crisis of published results. While this important topic was being addressed, the danger of non-reproducible and unsustainable research artefacts using machine learning in science arose. The brunt of this has been avoided by better education of reviewers who nowadays have the skills to spot insufficient validation practices. However, there is more potential to further ease the review process, improve collaboration and make results and models available to fellow scientists. This workshop will teach practical lessons that can be directly applied to elevate the quality of ML applications in science by scientists.
 
 It seems like we avoided the worst signs of the reproducibility crisis in science when applying machine learning in science. Thanks to better education for reviewers, easier access to tools, and a better understanding of zero-knowledge models.
