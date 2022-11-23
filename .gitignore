@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Nikola
+cache
+.doit.db
+output
+
 # Distribution / packaging
 .Python
 build/

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1669217898.9083169
+_modified_time = 1669218203.282077
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/post_header.tmpl'
 _template_uri = 'post_header.tmpl'
@@ -31,12 +31,12 @@ def render_body(context,**pageargs):
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         __M_writer = context.writer()
-        __M_writer('\n')
-        __M_writer('\n\n')
-        __M_writer('\n\n')
-        __M_writer('\n\n')
-        __M_writer('\n\n')
-        __M_writer('\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n\r\n')
+        __M_writer('\r\n\r\n')
+        __M_writer('\r\n\r\n')
+        __M_writer('\r\n\r\n')
+        __M_writer('\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -45,16 +45,16 @@ def render_body(context,**pageargs):
 def render_html_title(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        post = context.get('post', UNDEFINED)
         title = context.get('title', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n')
+        __M_writer('\r\n')
         if title and not post.meta('hidetitle'):
             __M_writer('    <h1 class="p-name entry-title" itemprop="headline name"><a href="')
             __M_writer(str(post.permalink()))
             __M_writer('" class="u-url">')
             __M_writer(filters.html_escape(str(post.title())))
-            __M_writer('</a></h1>\n')
+            __M_writer('</a></h1>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -63,17 +63,17 @@ def render_html_title(context):
 def render_html_translations(context,post):
     __M_caller = context.caller_stack._push_frame()
     try:
-        len = context.get('len', UNDEFINED)
         translations = context.get('translations', UNDEFINED)
-        lang = context.get('lang', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
         sorted = context.get('sorted', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n')
+        __M_writer('\r\n')
         if len(post.translated_to) > 1:
-            __M_writer('        <div class="metadata posttranslations translations">\n            <h3 class="posttranslations-intro">')
+            __M_writer('        <div class="metadata posttranslations translations">\r\n            <h3 class="posttranslations-intro">')
             __M_writer(str(messages("Also available in:")))
-            __M_writer('</h3>\n')
+            __M_writer('</h3>\r\n')
             for langname in sorted(translations):
                 if langname != lang and post.is_translation_available(langname):
                     __M_writer('                <p><a href="')
@@ -82,8 +82,8 @@ def render_html_translations(context,post):
                     __M_writer(str(langname))
                     __M_writer('">')
                     __M_writer(str(messages("LANGUAGE", langname)))
-                    __M_writer('</a></p>\n')
-            __M_writer('        </div>\n')
+                    __M_writer('</a></p>\r\n')
+            __M_writer('        </div>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -92,17 +92,17 @@ def render_html_translations(context,post):
 def render_html_sourcelink(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        post = context.get('post', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         show_sourcelink = context.get('show_sourcelink', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n')
+        __M_writer('\r\n')
         if show_sourcelink:
             __M_writer('        <p class="sourceline"><a href="')
             __M_writer(str(post.source_link()))
             __M_writer('" class="sourcelink">')
             __M_writer(str(messages("Source")))
-            __M_writer('</a></p>\n')
+            __M_writer('</a></p>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -111,53 +111,53 @@ def render_html_sourcelink(context):
 def render_html_post_header(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        def html_sourcelink():
-            return render_html_sourcelink(context)
+        _link = context.get('_link', UNDEFINED)
         multiple_authors_per_post = context.get('multiple_authors_per_post', UNDEFINED)
-        author_pages_generated = context.get('author_pages_generated', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         comments = _mako_get_namespace(context, 'comments')
         def html_translations(post):
             return render_html_translations(context,post)
         messages = context.get('messages', UNDEFINED)
-        post = context.get('post', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
+        def html_sourcelink():
+            return render_html_sourcelink(context)
+        author_pages_generated = context.get('author_pages_generated', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n    <header>\n        <div class="metadata">\n            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">\n')
+        __M_writer('\r\n    <header>\r\n        <div class="metadata">\r\n            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">\r\n')
         if author_pages_generated and multiple_authors_per_post:
             for author in post.authors():
                 __M_writer('                        <a class="u-url" href="')
                 __M_writer(str(_link('author', author)))
                 __M_writer('">')
                 __M_writer(filters.html_escape(str(author)))
-                __M_writer('</a>\n')
+                __M_writer('</a>\r\n')
         elif author_pages_generated:
             __M_writer('                    <a class="u-url" href="')
             __M_writer(str(_link('author', post.author())))
             __M_writer('">')
             __M_writer(filters.html_escape(str(post.author())))
-            __M_writer('</a>\n')
+            __M_writer('</a>\r\n')
         else:
             __M_writer('                    ')
             __M_writer(filters.html_escape(str(post.author())))
-            __M_writer('\n')
-        __M_writer('            </span></p>\n')
+            __M_writer('\r\n')
+        __M_writer('            </span></p>\r\n')
         if not post.meta('nocomments') and site_has_comments:
             __M_writer('                <p class="commentline">')
             __M_writer(str(comments.comment_link(post.permalink(), post._base_path)))
-            __M_writer('\n')
+            __M_writer('\r\n')
         __M_writer('            ')
         __M_writer(str(html_sourcelink()))
-        __M_writer('\n')
+        __M_writer('\r\n')
         if post.meta('link'):
             __M_writer('                    <p class="linkline"><a href="')
             __M_writer(str(post.meta('link')))
             __M_writer('">')
             __M_writer(str(messages("Original site")))
-            __M_writer('</a></p>\n')
-        __M_writer('        </div>\n        ')
+            __M_writer('</a></p>\r\n')
+        __M_writer('        </div>\r\n        ')
         __M_writer(str(html_translations(post)))
-        __M_writer('\n    </header>\n')
+        __M_writer('\r\n    </header>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

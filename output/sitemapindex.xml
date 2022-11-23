@@ -6,19 +6,7 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://realworld-ml.xyz/rss.xml</loc>
-  <lastmod>2022-11-23T13:41:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://realworld-ml.xyz/sitemap.xml</loc>
-  <lastmod>2022-11-23T15:34:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://realworld-ml.xyz/speaker/jesper-dramsch.xml</loc>
-  <lastmod>2022-11-23T13:58:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://realworld-ml.xyz/speaker/valerio-maggio.xml</loc>
-  <lastmod>2022-11-23T13:58:00Z</lastmod>
+  <lastmod>2022-11-23T15:43:00Z</lastmod>
  </sitemap>
 </sitemapindex>

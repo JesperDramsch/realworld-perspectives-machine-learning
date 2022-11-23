@@ -7,138 +7,98 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://realworld-ml.xyz/</loc>
-  <lastmod>2022-11-23T15:28:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/2022/</loc>
-  <lastmod>2022-11-23T13:58:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/archive.html</loc>
-  <lastmod>2022-11-23T15:34:00Z</lastmod>
+  <lastmod>2022-11-23T15:43:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/categories/</loc>
-  <lastmod>2022-11-23T13:41:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/listings/</loc>
-  <lastmod>2022-11-23T13:41:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/official/</loc>
-  <lastmod>2022-11-23T15:28:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/pydata/</loc>
-  <lastmod>2022-11-23T15:28:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/resources.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/resources/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/schedule.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/schedule/</loc>
-  <lastmod>2022-11-23T15:28:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/schedule/official/</loc>
-  <lastmod>2022-11-23T15:28:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/</loc>
-  <lastmod>2022-11-23T14:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/gemma-turon/</loc>
-  <lastmod>2022-11-23T14:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/goku-mohandas/</loc>
-  <lastmod>2022-11-23T14:01:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/speaker/jesper-dramsch.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/jesper-dramsch/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/mike-walmsley/</loc>
-  <lastmod>2022-11-23T14:01:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/speaker/valerio-maggio.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/valerio-maggio/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speakers/</loc>
-  <lastmod>2022-11-23T14:39:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/</loc>
-  <lastmod>2022-11-23T14:59:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/talks/evaluating-machine-learning-models.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/evaluating-machine-learning-models/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/talks/integrating-ml-in-experimental-pipelines.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/integrating-ml-in-experimental-pipelines/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/talks/invited-talk.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/invited-talk/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/talks/testing-in-machine-learning.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/testing-in-machine-learning/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
- </url>
- <url>
-  <loc>https://realworld-ml.xyz/talks/why-and-how-make-ml-reproducible.html</loc>
-  <lastmod>2022-11-23T15:02:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/why-and-how-make-ml-reproducible/</loc>
-  <lastmod>2022-11-23T13:59:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/tickets/</loc>
-  <lastmod>2022-11-23T14:18:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/time/</loc>
-  <lastmod>2022-11-23T15:19:00Z</lastmod>
+  <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
 </urlset>

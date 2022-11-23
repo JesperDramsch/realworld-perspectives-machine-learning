@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1669217898.7467892
+_modified_time = 1669218203.4711106
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/author.tmpl'
 _template_uri = 'author.tmpl'
@@ -33,29 +33,29 @@ def render_body(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
         kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
         title = _import_ns.get('title', context.get('title', UNDEFINED))
         description = _import_ns.get('description', context.get('description', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
+        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
         __M_writer = context.writer()
-        __M_writer('\n')
-        __M_writer('\n\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_head'):
             context['self'].extra_head(**pageargs)
         
 
-        __M_writer('\n\n')
+        __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\n')
+        __M_writer('\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -66,15 +66,15 @@ def render_extra_head(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        def extra_head():
-            return render_extra_head(context)
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
         kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context)
         __M_writer = context.writer()
-        __M_writer('\n    ')
+        __M_writer('\r\n    ')
         __M_writer(str(feeds_translations.head(author, kind, rss_override=False)))
-        __M_writer('\n')
+        __M_writer('\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -86,27 +86,27 @@ def render_content(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
         kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
         def content():
             return render_content(context)
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
         title = _import_ns.get('title', context.get('title', UNDEFINED))
         description = _import_ns.get('description', context.get('description', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
         __M_writer = context.writer()
-        __M_writer('\n<article class="authorpage">\n    <header>\n        <h1>')
+        __M_writer('\r\n<article class="authorpage">\r\n    <header>\r\n        <h1>')
         __M_writer(filters.html_escape(str(title)))
-        __M_writer('</h1>\n')
+        __M_writer('</h1>\r\n')
         if description:
             __M_writer('            <p>')
             __M_writer(str(description))
-            __M_writer('</p>\n')
-        __M_writer('        <div class="metadata">\n            ')
+            __M_writer('</p>\r\n')
+        __M_writer('        <div class="metadata">\r\n            ')
         __M_writer(str(feeds_translations.feed_link(author, kind)))
-        __M_writer('\n        </div>\n    </header>\n')
+        __M_writer('\r\n        </div>\r\n    </header>\r\n')
         if posts:
-            __M_writer('        <ul class="postlist">\n')
+            __M_writer('        <ul class="postlist">\r\n')
             for post in posts:
                 __M_writer('                <li><time class="listdate" datetime="')
                 __M_writer(str(post.formatted_date('webiso')))
@@ -118,9 +118,9 @@ def render_content(context,**pageargs):
                 __M_writer(str(post.permalink()))
                 __M_writer('" class="listtitle">')
                 __M_writer(filters.html_escape(str(post.title())))
-                __M_writer('</a></li>\n')
-            __M_writer('        </ul>\n')
-        __M_writer('</article>\n')
+                __M_writer('</a></li>\r\n')
+            __M_writer('        </ul>\r\n')
+        __M_writer('</article>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

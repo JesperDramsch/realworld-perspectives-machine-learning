@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1669217898.8518076
+_modified_time = 1669218203.5206192
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/list.tmpl'
 _template_uri = 'list.tmpl'
@@ -32,20 +32,20 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'archive_nav')._populate(_import_ns, ['*'])
-        archive_nav = _mako_get_namespace(context, 'archive_nav')
         def content():
             return render_content(context._locals(__M_locals))
-        items = _import_ns.get('items', context.get('items', UNDEFINED))
+        archive_nav = _mako_get_namespace(context, 'archive_nav')
         title = _import_ns.get('title', context.get('title', UNDEFINED))
+        items = _import_ns.get('items', context.get('items', UNDEFINED))
         messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         __M_writer = context.writer()
-        __M_writer('\n')
-        __M_writer('\n\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\n')
+        __M_writer('\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -56,36 +56,36 @@ def render_content(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'archive_nav')._populate(_import_ns, ['*'])
-        archive_nav = _mako_get_namespace(context, 'archive_nav')
         def content():
             return render_content(context)
-        items = _import_ns.get('items', context.get('items', UNDEFINED))
+        archive_nav = _mako_get_namespace(context, 'archive_nav')
         title = _import_ns.get('title', context.get('title', UNDEFINED))
+        items = _import_ns.get('items', context.get('items', UNDEFINED))
         messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         __M_writer = context.writer()
-        __M_writer('\n<div class="post-archive">\n    <header>\n        <h2>')
+        __M_writer('\r\n<div class="post-archive">\r\n    <header>\r\n        <h2>')
         __M_writer(filters.html_escape(str(title)))
-        __M_writer('</h2>\n    </header>\n    ')
+        __M_writer('</h2>\r\n    </header>\r\n    ')
         __M_writer(str(archive_nav.archive_navigation()))
-        __M_writer('\n')
+        __M_writer('\r\n')
         if items:
-            __M_writer('    <ul class="listing">\n')
+            __M_writer('    <ul class="listing">\r\n')
             for text, link, count in items:
                 __M_writer('        <li><a href="')
                 __M_writer(str(link))
                 __M_writer('"><span>')
                 __M_writer(filters.html_escape(str(text)))
-                __M_writer('</span></a>\n')
+                __M_writer('</span></a>\r\n')
                 if count:
                     __M_writer('            (')
                     __M_writer(str(count))
-                    __M_writer(')\n')
-            __M_writer('    </ul>\n')
+                    __M_writer(')\r\n')
+            __M_writer('    </ul>\r\n')
         else:
             __M_writer('    <p>')
             __M_writer(str(messages("Nothing found.")))
-            __M_writer('</p>\n')
-        __M_writer('</div>\n')
+            __M_writer('</p>\r\n')
+        __M_writer('</div>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

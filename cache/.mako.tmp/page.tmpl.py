@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1669217898.8783116
+_modified_time = 1669218203.2405715
 _enable_loop = True
 _template_filename = 'themes/maupassant/templates/page.tmpl'
 _template_uri = 'page.tmpl'
@@ -39,25 +39,25 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        comments = _mako_get_namespace(context, 'comments')
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
         math = _mako_get_namespace(context, 'math')
-        messages = context.get('messages', UNDEFINED)
-        enable_comments = context.get('enable_comments', UNDEFINED)
-        post = context.get('post', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
+        post = context.get('post', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        enable_comments = context.get('enable_comments', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n')
-        __M_writer('\n')
-        __M_writer('\n')
-        __M_writer('\n')
-        __M_writer('\n\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
 
-        __M_writer('\n')
+        __M_writer('\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -66,29 +66,29 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        comments = _mako_get_namespace(context, 'comments')
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
         math = _mako_get_namespace(context, 'math')
-        messages = context.get('messages', UNDEFINED)
-        enable_comments = context.get('enable_comments', UNDEFINED)
-        post = context.get('post', UNDEFINED)
         def content():
             return render_content(context)
+        post = context.get('post', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        enable_comments = context.get('enable_comments', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n<article class="post-')
+        __M_writer('\r\n<article class="post-')
         __M_writer(str(post.meta('type')))
-        __M_writer(' storypage" itemscope="itemscope" itemtype="http://schema.org/Article">\n    <div class="e-content entry-content" itemprop="articleBody text">\n    ')
+        __M_writer(' storypage" itemscope="itemscope" itemtype="http://schema.org/Article">\r\n    <div class="e-content entry-content" itemprop="articleBody text">\r\n    ')
         __M_writer(str(post.text()))
-        __M_writer('\n    </div>\n')
+        __M_writer('\r\n    </div>\r\n')
         if site_has_comments and enable_comments and not post.meta('nocomments'):
-            __M_writer('        <section class="comments">\n        <h2>')
+            __M_writer('        <section class="comments">\r\n        <h2>')
             __M_writer(str(messages("Comments")))
-            __M_writer('</h2>\n        ')
+            __M_writer('</h2>\r\n        ')
             __M_writer(str(comments.comment_form(post.permalink(absolute=True), post.title(), post.base_path)))
-            __M_writer('\n        </section>\n')
+            __M_writer('\r\n        </section>\r\n')
         __M_writer('    ')
         __M_writer(str(math.math_scripts_ifpost(post)))
-        __M_writer('\n</article>\n')
+        __M_writer('\r\n</article>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
