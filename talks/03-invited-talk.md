@@ -8,6 +8,9 @@
 .. description: 
 .. type: text
 .. author: Mike Walmsley
+.. linkedin: 
+.. twitter: 
+.. github: 
 -->
 
 Write your post here.

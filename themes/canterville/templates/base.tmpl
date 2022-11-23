@@ -1,0 +1,112 @@
+## -*- coding: utf-8 -*-
+<%namespace name="base" file="base_helper.tmpl" import="*"/>
+<%namespace name="header" file="base_header.tmpl" import="*"/>
+<%namespace name="footer" file="base_footer.tmpl" import="*"/>
+${set_locale(lang)}
+${base.html_headstart()}
+<%block name="extra_head">
+### Leave this block alone.
+</%block>
+${template_hooks['extra_head']()}
+</head>
+<body class="nav-closed">
+${header.html_navigation_links()}
+
+<div class="site-wrapper">
+<%block name="cover">
+    % if 'main_index' in pagekind and BANNER_URL :
+    <header class="main-header" style="background-image: url(${BANNER_URL})">
+    % elif 'post_page' in pagekind and post.meta('banner'):
+    <header class="main-header" style="background-image: url(${post.meta('banner')})">
+    % else:
+    <header class="main-header" style="background-image: url(${BANNER_URL})">
+    % endif
+        <nav class="main-nav overlay clearfix">
+            <a class="blog-logo" href="${blog_url}"><img src="${logo_url}" alt="Blog Logo" /></a>
+            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+        </nav>
+        
+        <div class="vertical">
+            <div class="main-header-content inner">
+            % if 'post_page' in pagekind:
+                % if post.meta('github'):
+                <a  href="${post.meta('github')}" target="_blank">
+                    <span class="icon-github" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if post.meta('twitter'):
+                <a class="bloglogo" href="${post.meta('twitter')}"" target="_blank">
+                    <span class="icon-twitter" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if post.meta('linkedin'):
+                <a  href="${post.meta('linkedin')}" target="_blank">
+                    <span class="icon-linkedin" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if post.meta('link'):
+                <a class="bloglogo" href="${post.meta('link')}"" target="_blank">
+                    <span class="icon-link" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+            %else:
+                % if GITHUB_URL:
+                <a  href="${GITHUB_URL}" target="_blank">
+                    <span class="icon-github" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if TWITTER_URL:
+                <a class="bloglogo" href=${TWITTER_URL} target="_blank">
+                    <span class="icon-twitter" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if LINKEDIN_URL:
+                <a  href="${LINKEDIN_URL}" target="_blank">
+                    <span class="icon-linkedin" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if GHOST_URL:
+                <a class="bloglogo" href=${GHOST_URL} target="_blank">
+                    <span class="icon-ghost" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if HUGO_URL:
+                <a class="bloglogo" href=${HUGO_URL} target="_blank">
+                    <span class="icon-hugo" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+                % if WORKSHOP_URL:
+                <a class="bloglogo" href=${WORKSHOP_URL} target="_blank">
+                    <span class="icon-link" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+            % endif
+                <h1 class="page-title">${title}</h1>
+                <h2 class="page-description">${description}</h2>
+            </div>
+        </div>
+        <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+        
+    </header>
+</%block>
+    <main id="content" class="content" role="main">
+        <%block name="content"></%block>
+    </main>
+    ${footer.html_footer()}
+</div>
+${base.late_load_js()}
+<%block name="extra_js"></%block>
+${body_end}
+${template_hooks['body_end']()}
+</body>
+</html>

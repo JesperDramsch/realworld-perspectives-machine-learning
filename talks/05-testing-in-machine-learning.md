@@ -8,6 +8,9 @@
 .. description: 
 .. type: text
 .. author: Goku Mohandas
+.. linkedin: 
+.. twitter: 
+.. github: 
 -->
 
 What is testing ML and how it's different from testing deterministic code

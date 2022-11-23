@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html prefix="" lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width">
 <title>Evaluating Machine Learning Models | Real-world Perspectives to Avoid the Worst Mistakes using ML in Science</title>
-<link href="../../assets/css/theme.css" type="text/css" rel="stylesheet">
-<link href="../../assets/css/pure.css" type="text/css" rel="stylesheet">
-<link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/screen.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/nav.css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400%7CInconsolata">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="canonical" href="https://realworld-ml.xyz/talks/evaluating-machine-learning-models/">
@@ -20,105 +23,74 @@
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2022-12-02T13:25:00+01:00">
 </head>
-<body>
-<div class="body_container">
-    <div id="header">
-        <div class="site-name">
-                <h1>Real-world Perspectives to Avoid the Worst Mistakes using ML in Science</h1>
-        </div>
+<body class="nav-closed">
 
-        <div id="nav-menu">
-            <div class="bitcron_nav_container">
-                <div class="bitcron_nav">
-                    <div class="site_nav_wrap">
-                        <ul class="site_nav sm sm-base">
-<li><a href="../../" class="nav__item">Home</a></li>
-            <li><a href="../" class="nav__item">Talks</a></li>
-            <li><a href="../../schedule/" class="nav__item">Schedule</a></li>
-            <li><a href="../../speakers/" class="nav__item">Speakers</a></li>
-            <li><a href="../../resources/" class="nav__item">Resources</a></li>
-            <li><a href="../../tickets/" class="nav__item">Pydata Tickets</a></li>
-
-                            
-                        </ul>
-<div class="clear clear_nav_inline_end"></div>
-                    </div>
-                </div>
-                <div class="clear clear_nav_end"></div>
-            </div>
-        </div>
-    </div>
-    <div id="layout">
-        <div class="pure-g">
-            <div class=" pure-u-24-24 pure-u-sm-24-24 pure-u-md-18-24 pure_cell">
-                <div class="content_container">
-                    <!--Body content-->
-                    <div class="row">
-                        
-                        
-<div class="post post-page">
-    <h1 class="post-title">Evaluating Machine Learning Models</h1>
-    <div class="post-content">
-        <p>In this talk, we will introduce the main features of a <strong>Machine Learning (ML) Experiment</strong>. In the first part, we will first dive into understanding the benefits and pitfalls of common evaluation metrics (e.g. accuracy VS F1 score), whilst the second part will be mainly focused on designing reproducible and (statistically) robust evaluation pipelines. </p>
-<p>The main lessons learnt and takeaway messages from the talk will be showcased in an interactive tutorial, with applications in biomedicine.</p>
-    </div>
-    <div class="postpromonav">
-        <nav><ul class="pager hidden-print">
-<li class="previous">
-                <a href="../why-and-how-make-ml-reproducible/" rel="prev" title="Why and how make ML reproducible?">Previous talk</a>
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+<li class="nav-opened" role="presentation">
+                <a href="../../">Home</a>
             </li>
-            <li class="next">
-                <a href="../invited-talk/" rel="next" title="Invited Talk">Next talk</a>
+            <li class="nav-opened" role="presentation">
+                <a href="../">Talks</a>
             </li>
-        </ul></nav>
+            <li class="nav-opened" role="presentation">
+                <a href="../../schedule/">Schedule</a>
+            </li>
+            <li class="nav-opened" role="presentation">
+                <a href="../../speaker/">Speakers</a>
+            </li>
+            <li class="nav-opened" role="presentation">
+                <a href="../../resources/">Resources</a>
+            </li>
+            <li class="nav-opened" role="presentation">
+                <a href="../../tickets/">Pydata Tickets</a>
+            </li>
+    
+    
+    </ul>
 </div>
-    
-    
+<span class="nav-cover"></span>
 
 
-    
-    
+<div class="site-wrapper">
 
-
-</div>
-
-                </div>
-                <!--End of body content-->
-                <div style="clear:both;height:0;"></div>
+    <header class="main-header" style="background-image: url(../../images/banner.jpg)"><nav class="main-nav overlay clearfix"><a class="blog-logo" href="https://realworld-ml.xyz/"><img src="../../images/logo.png" alt="Blog Logo"></a>
+            <a class="menu-button" href="#"><span class="burger">☰</span><span class="word">Menu</span></a>
+        </nav><div class="vertical">
+            <div class="main-header-content inner">
+                <a href="https://github.com/leriomaggio" target="_blank">
+                    <span class="icon-github" style="color:white;font-size:2em"></span>
+                </a>
+                 
+                <a href="https://www.linkedin.com/in/valeriomaggio/" target="_blank">
+                    <span class="icon-linkedin" style="color:white;font-size:2em"></span>
+                </a>
+                 
+                <a class="bloglogo" href="https://www.anaconda.com/" target="_blank">
+                    <span class="icon-link" style="color:white;font-size:2em"></span>
+                </a>
+                 
+                <h1 class="page-title">Evaluating Machine Learning Models</h1>
+                <h2 class="page-description"></h2>
             </div>
         </div>
-
-        <!-- Sidebar -->
-
-        <div class=" pure-u-6-24 pure_cell">
-            <div id="sidebar">
-                <div class="widget">
-                    <div id="search_bar">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="footer">
-        Contents © 2022         <a href="mailto:jesper@dramsch.net">Jesper Dramsch</a> - More projects at         <a href="https://dramsch.net">dramsch.net</a>         
+        <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
         
-    </div>
+    </header><main id="content" class="content" role="main"><article class="post post"><header class="post-header"><h1 class="post-title">Evaluating Machine Learning Models</h1>
+        <section class="post-meta"> by
+            <a href="../../speaker/valerio-maggio/">Valerio Maggio</a>
+            on
+            <time class="post-date" datetime="2022-12-02T13:25:00+01:00">
+                December 2, 2022 13:25
+            </time></section></header><section class="post-content"><p>In this talk, we will introduce the main features of a <strong>Machine Learning (ML) Experiment</strong>. In the first part, we will first dive into understanding the benefits and pitfalls of common evaluation metrics (e.g. accuracy VS F1 score), whilst the second part will be mainly focused on designing reproducible and (statistically) robust evaluation pipelines. </p>
+<p>The main lessons learnt and takeaway messages from the talk will be showcased in an interactive tutorial, with applications in biomedicine.</p>
+    </section><footer class="post-footer"></footer></article></main><footer class="site-footer clearfix"><section class="poweredby">Contents © 2022         <a href="mailto:jesper@dramsch.net">Jesper Dramsch</a> - More projects at         <a href="https://dramsch.net">dramsch.net</a>         </section></footer>
+</div>
 
-    <!--FIXME: put these somewhere                            -->
-    <!--%if len(translations) > 1:-->
-    <!--<li>
-</li>-->
-    <!--%endif-->
-    <!--% if show_sourcelink:-->
-    <!--
--->
-    <!--%endif-->
-    <link href="../../assets/css/duoshuo.css" type="text/css" rel="stylesheet">
-<script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(1, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
-</div>
-</div>
+    <script type="text/javascript" src="../../assets/js/jquery.js"></script><script type="text/javascript" src="../../assets/js/jquery.fitvids.js"></script><script type="text/javascript" src="../../assets/js/index.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1669218203.417102
+_modified_time = 1669225571.0442343
 _enable_loop = True
 _template_filename = 'C:/tools/Anaconda3/envs/nikola/lib/site-packages/nikola/data/themes/base/templates/authors.tmpl'
 _template_uri = 'authors.tmpl'
@@ -32,14 +32,14 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
-        items = _import_ns.get('items', context.get('items', UNDEFINED))
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
-        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
         messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        items = _import_ns.get('items', context.get('items', UNDEFINED))
+        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         __M_writer = context.writer()
         __M_writer('\n')
@@ -82,12 +82,12 @@ def render_content(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         def content():
             return render_content(context)
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         items = _import_ns.get('items', context.get('items', UNDEFINED))
         hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         __M_writer = context.writer()
         __M_writer('\n<article class="authorindex">\n')

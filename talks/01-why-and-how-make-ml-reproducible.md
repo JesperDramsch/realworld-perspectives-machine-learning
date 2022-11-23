@@ -8,6 +8,9 @@
 .. description: 
 .. type: text
 .. author: Jesper Dramsch
+.. linkedin: 
+.. twitter: 
+.. github: 
 -->
 
 The overview talk serves to set the scene and present different areas where researchers can increase the quality of their research artefacts that use ML. These increases in quality are achieved by using existing solutions to minimize the impact these methods take on researcher productivity. 

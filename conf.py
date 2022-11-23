@@ -25,7 +25,7 @@ SITE_URL = "https://realworld-ml.xyz/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://realworld-ml.xyz/"
 BLOG_EMAIL = "jesper@dramsch.net"
-BLOG_DESCRIPTION = "Numerous scientific disciplines have noticed a reproducibility crisis of published results. While this important topic was being addressed, the danger of non-reproducible and unsustainable research artefacts using machine learning in science arose. The brunt of this has been avoided by better education of reviewers who nowadays have the skills to spot insufficient validation practices. However, there is more potential to further ease the review process, improve collaboration and make results and models available to fellow scientists. This workshop will teach practical lessons that can be directly applied to elevate the quality of ML applications in science by scientists."  # (translatable)
+BLOG_DESCRIPTION = "A workshop at Pydata Global 2022"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -145,7 +145,7 @@ NAVIGATION_LINKS = {
         ("/", "Home"),
         ("/talks/", "Talks"),
         ("/schedule/", "Schedule"),
-        ("/speakers/", "Speakers"),
+        ("/speaker/", "Speakers"),
         ("/resources/", "Resources"),
         ("/tickets/", "Pydata Tickets"),
     ),
@@ -157,7 +157,8 @@ NAVIGATION_LINKS = {
 NAVIGATION_ALT_LINKS = {DEFAULT_LANG: ()}
 
 # Name of the theme to use.
-THEME = "maupassant"
+# THEME = "maupassant"
+THEME = "canterville"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
@@ -578,10 +579,10 @@ AUTHOR_PAGES_DESCRIPTIONS = {
 # If you do not want to display an author publicly, you can mark it as hidden.
 # The author will not be displayed on the author list page.
 # Author pages and links to them will still be generated.
-HIDDEN_AUTHORS = ["Guest"]
+HIDDEN_AUTHORS = ["Guest", "Break"]
 
 # Allow multiple, comma-separated authors for a post? (Requires theme support, present in built-in themes)
-# MULTIPLE_AUTHORS_PER_POST = False
+MULTIPLE_AUTHORS_PER_POST = True
 
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
@@ -671,6 +672,7 @@ REDIRECTIONS = [
     ("official/index.html", "https://global2022.pydata.org/cfp/talk/Y9VFDD/"),
     ("pydata/index.html", "https://pydata.org/global2022/"),
     ("schedule/official/index.html", "https://pydata.org/global2022/schedule/"),
+    ("/github/index.html", "https://github.com/JesperDramsch/ml-for-science-reproducibility-tutorial"),
 ]
 
 # Presets of commands to execute to deploy. Can be anything, for
@@ -1413,3 +1415,49 @@ WARN_ABOUT_TAG_METADATA = False
 # rendered
 GLOBAL_CONTEXT_FILLER = []
 
+LOGO_URL = "/images/logo.png"
+GLOBAL_CONTEXT = {
+    #'TWITTER_URL': None,
+    "GITHUB_URL": "/github/",
+    "WORKSHOP_URL": "/pydata/",
+    "GHOST_URL": "/schedule/",
+    #'HUGO_URL': '/pydata/',
+    #'LINKEDIN_URL': 'https://www.linkedin.com/company/pydata-global/',
+    "BANNER_URL": "/images/banner.jpg",
+    "AUTHOR_DETAILS": {
+        "Valerio Maggio": {
+            "link": "https://www.anaconda.com/",
+            "twitter": "https://twitter.com/leriomaggio",
+            "linkedin": "https://www.linkedin.com/in/valeriomaggio",
+            "github": "https://github.com/leriomaggio",
+            "image": "/images/valerio.jpg",
+        },
+        "Gemma Turon": {
+            "link": "https://www.ersilia.io/",
+            "twitter": "https://twitter.com/TuronGemma",
+            "linkedin": "https://www.linkedin.com/in/gemma-turon",
+            "github": "https://github.com/GemmaTuron",
+            "image": "/images/gemma.png",
+        },
+        "Jesper Dramsch": {
+            "link": "https://dramsch.net/",
+            "linkedin": "https://www.linkedin.com/in/mlds",
+            "github": "https://github.com/JesperDramsch",
+            "image": "/images/jesper.jpg",
+        },
+        "Mike Walmsley": {
+            "link": "https://walmsley.dev/",
+            "twitter": "https://twitter.com/mike_walmsley_",
+            "linkedin": "https://www.linkedin.com/in/m1kewalmsley",
+            "github": "https://github.com/mwalmsley",
+            "image": "/images/mike.jpg",
+        },
+        "Goku Mohandas": {
+            "link": "https://madewithml.com",
+            "twitter": "https://twitter.com/GokuMohandas",
+            "linkedin": "https://www.linkedin.com/in/goku",
+            "github": "https://github.com/GokuMohandas",
+            "image": "/images/goku.jpg",
+        },
+    },
+}

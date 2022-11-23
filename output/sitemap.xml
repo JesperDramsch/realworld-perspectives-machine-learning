@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://realworld-ml.xyz/</loc>
-  <lastmod>2022-11-23T15:42:00Z</lastmod>
+  <lastmod>2022-11-23T16:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/2022/</loc>
@@ -15,11 +15,15 @@
  </url>
  <url>
   <loc>https://realworld-ml.xyz/archive.html</loc>
-  <lastmod>2022-11-23T15:43:00Z</lastmod>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/categories/</loc>
   <lastmod>2022-11-23T15:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://realworld-ml.xyz/github/</loc>
+  <lastmod>2022-11-23T16:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/official/</loc>
@@ -43,7 +47,11 @@
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/</loc>
-  <lastmod>2022-11-23T15:42:00Z</lastmod>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://realworld-ml.xyz/speaker/break/</loc>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/speaker/gemma-turon/</loc>
@@ -66,12 +74,28 @@
   <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
+  <loc>https://realworld-ml.xyz/speaker/vasilio-maggio/</loc>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://realworld-ml.xyz/speakers/</loc>
   <lastmod>2022-11-23T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/</loc>
-  <lastmod>2022-11-23T15:42:00Z</lastmod>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://realworld-ml.xyz/talks/break-chat/</loc>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://realworld-ml.xyz/talks/closing/</loc>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://realworld-ml.xyz/talks/discussion-audience-chat/</loc>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/evaluating-machine-learning-models/</loc>
@@ -84,6 +108,10 @@
  <url>
   <loc>https://realworld-ml.xyz/talks/invited-talk/</loc>
   <lastmod>2022-11-23T15:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://realworld-ml.xyz/talks/opening-talk/</loc>
+  <lastmod>2022-11-23T17:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/talks/testing-in-machine-learning/</loc>

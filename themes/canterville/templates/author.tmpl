@@ -1,0 +1,65 @@
+## -*- coding: utf-8 -*-
+<%inherit file="list_post.tmpl"/>
+<%namespace name="feeds_translations" file="feeds_translations_helper.tmpl" import="*"/>
+
+<%block name="extra_head">
+    ${feeds_translations.head(author, kind, rss_override=False)}
+</%block>
+
+<%block name="cover">
+    % if 'main_index' in pagekind and BANNER_URL :
+    <header class="main-header" style="background-image: url(${BANNER_URL})">
+    % elif 'post_page' in pagekind and post.meta('banner'):
+    <header class="main-header" style="background-image: url(${post.meta('banner')})">
+    % else:
+    <header class="main-header" style="background-image: url(${BANNER_URL})">
+    % endif
+        <nav class="main-nav overlay clearfix">
+            <a class="blog-logo" href="${blog_url}"><img src="${logo_url}" alt="Blog Logo" /></a>
+            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+        </nav>
+        
+        <div class="vertical">
+            <div class="main-header-content inner">
+            
+            % for service in ['github', 'linkedin', 'twitter', 'link']:
+                % if service in AUTHOR_DETAILS.get(author, {}):
+                <a  href="${AUTHOR_DETAILS[author][service]}" target="_blank">
+                    <span class="icon-${service}" style="color:white;font-size:2em"></span>
+                </a>
+                &nbsp;
+                % endif
+            % endfor
+                <h1 class="page-title">${title.replace("Posts", "Talks")}</h1>
+                
+            </div>
+        </div>
+        <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+        
+    </header>
+</%block>
+
+<%block name="content">
+<article class="authorpage">
+    <header>
+        <h1>${title.replace("Posts","Talks")|h}</h1>
+        % if 'image' in AUTHOR_DETAILS.get(author, {}):
+        <img src="${AUTHOR_DETAILS[author]['image']}" alt="${author}" />
+        % endif
+        %if description:
+            <p>${description}</p>
+        %endif
+        <div class="metadata">
+            ${feeds_translations.feed_link(author, kind)}
+        </div>
+    </header>
+    <h2>Talks</h2>
+    %if posts:
+        <ul class="postlist">
+            % for post in posts:
+                <li><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time> <a href="${post.permalink()}" class="listtitle">${post.title()|h}</a></li>
+            % endfor
+        </ul>
+    %endif
+</article>
+</%block>
