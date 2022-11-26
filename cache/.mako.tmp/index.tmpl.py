@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1669227223.223157
+_modified_time = 1669472864.074089
 _enable_loop = True
 _template_filename = 'themes/canterville/templates/index.tmpl'
 _template_uri = 'index.tmpl'
@@ -39,31 +39,31 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        page_links = context.get('page_links', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
-        comments = _mako_get_namespace(context, 'comments')
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        current_page = context.get('current_page', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
-        nextlink = context.get('nextlink', UNDEFINED)
-        math = _mako_get_namespace(context, 'math')
-        prevlink = context.get('prevlink', UNDEFINED)
-        front_index_header = context.get('front_index_header', UNDEFINED)
         pagination = _mako_get_namespace(context, 'pagination')
-        permalink = context.get('permalink', UNDEFINED)
-        def content():
-            return render_content(context._locals(__M_locals))
-        pagekind = context.get('pagekind', UNDEFINED)
-        prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        index_teasers = context.get('index_teasers', UNDEFINED)
+        prevlink = context.get('prevlink', UNDEFINED)
         def content_header():
             return render_content_header(context._locals(__M_locals))
-        posts = context.get('posts', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
-        index_file = context.get('index_file', UNDEFINED)
-        author_pages_generated = context.get('author_pages_generated', UNDEFINED)
-        index_teasers = context.get('index_teasers', UNDEFINED)
+        front_index_header = context.get('front_index_header', UNDEFINED)
+        permalink = context.get('permalink', UNDEFINED)
         _link = context.get('_link', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        pagekind = context.get('pagekind', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        def content():
+            return render_content(context._locals(__M_locals))
+        prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
+        index_file = context.get('index_file', UNDEFINED)
+        current_page = context.get('current_page', UNDEFINED)
+        nextlink = context.get('nextlink', UNDEFINED)
+        math = _mako_get_namespace(context, 'math')
+        author_pages_generated = context.get('author_pages_generated', UNDEFINED)
+        page_links = context.get('page_links', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
+        date_format = context.get('date_format', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -88,13 +88,13 @@ def render_body(context,**pageargs):
 def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        permalink = context.get('permalink', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        def extra_head():
+            return render_extra_head(context)
         parent = context.get('parent', UNDEFINED)
         index_file = context.get('index_file', UNDEFINED)
         math = _mako_get_namespace(context, 'math')
-        def extra_head():
-            return render_extra_head(context)
-        posts = context.get('posts', UNDEFINED)
-        permalink = context.get('permalink', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(parent.extra_head()))
@@ -114,26 +114,26 @@ def render_extra_head(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        page_links = context.get('page_links', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
-        comments = _mako_get_namespace(context, 'comments')
-        current_page = context.get('current_page', UNDEFINED)
-        nextlink = context.get('nextlink', UNDEFINED)
-        math = _mako_get_namespace(context, 'math')
-        prevlink = context.get('prevlink', UNDEFINED)
-        front_index_header = context.get('front_index_header', UNDEFINED)
         pagination = _mako_get_namespace(context, 'pagination')
-        def content():
-            return render_content(context)
-        pagekind = context.get('pagekind', UNDEFINED)
-        prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        index_teasers = context.get('index_teasers', UNDEFINED)
+        prevlink = context.get('prevlink', UNDEFINED)
         def content_header():
             return render_content_header(context)
-        posts = context.get('posts', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
-        author_pages_generated = context.get('author_pages_generated', UNDEFINED)
-        index_teasers = context.get('index_teasers', UNDEFINED)
+        front_index_header = context.get('front_index_header', UNDEFINED)
         _link = context.get('_link', UNDEFINED)
+        pagekind = context.get('pagekind', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        def content():
+            return render_content(context)
+        prev_next_links_reversed = context.get('prev_next_links_reversed', UNDEFINED)
+        current_page = context.get('current_page', UNDEFINED)
+        nextlink = context.get('nextlink', UNDEFINED)
+        author_pages_generated = context.get('author_pages_generated', UNDEFINED)
+        math = _mako_get_namespace(context, 'math')
+        page_links = context.get('page_links', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
+        date_format = context.get('date_format', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content_header'):

@@ -685,11 +685,13 @@ REDIRECTIONS = [
 # to `nikola deploy`.  If no arguments are specified, a preset
 # named `default` will be executed.  You can use as many presets
 # in a `nikola deploy` command as you like.
-# DEPLOY_COMMANDS = {
-#     'default': [
-#         "rsync -rav --delete --delete-after output/ joe@my.site:/srv/www/site",
-#     ]
-# }
+DEPLOY_COMMANDS = {
+    'default': [
+        "nikola build",
+        "nikola github_deploy",
+        "nikola ping",
+    ]
+}
 
 # github_deploy configuration
 # For more details, read the manual:
@@ -1461,3 +1463,17 @@ GLOBAL_CONTEXT = {
         },
     },
 }
+
+PING_XMLRPC_SERVICES = [
+    "http://rpc.pingomatic.com/",
+    "http://ping.baidu.com/ping",
+    "http://ping.blo.gs/",
+    "http://ping.feedburner.com/",
+    "http://ping.feedburner.google.com/",
+    "http://rpc.twingly.com/",
+]
+
+PING_GET_SERVICES = [
+    "http://www.bing.com/webmaster/ping.aspx?sitemap={0}".format(SITE_URL + "sitemap.xml"),
+    "http://www.google.com/webmasters/tools/ping?sitemap={0}".format(SITE_URL + "sitemap.xml"),
+]

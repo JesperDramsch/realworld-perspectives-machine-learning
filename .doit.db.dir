@@ -9,7 +9,7 @@
 'redirect:output\\schedule/official/index.html', (7680, 138)
 'create_bundles:output\\assets\\css\\all-nocdn.css', (8192, 827)
 'copy_assets:output\\assets\\fonts\\Genericons.woff', (9216, 314)
-'render_posts:cache\\pages\\index.html', (9728, 345)
+'render_posts:cache\\pages\\index.html', (9728, 346)
 'copy_assets:output\\assets\\css\\baguetteBox.min.css', (10240, 442)
 'redirect:output\\pydata/index.html', (10752, 138)
 'copy_assets:output\\assets\\xml\\atom.xsl', (11264, 421)
