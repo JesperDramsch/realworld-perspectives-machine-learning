@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1670264338.1669204
+_modified_time = 1670266494.1134682
 _enable_loop = True
 _template_filename = 'themes/canterville/templates/author.tmpl'
 _template_uri = 'author.tmpl'
@@ -32,24 +32,24 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        def content():
-            return render_content(context._locals(__M_locals))
+        pagekind = _import_ns.get('pagekind', context.get('pagekind', UNDEFINED))
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
         date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
         blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
         logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
-        BANNER_URL = _import_ns.get('BANNER_URL', context.get('BANNER_URL', UNDEFINED))
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
         def cover():
             return render_cover(context._locals(__M_locals))
-        pagekind = _import_ns.get('pagekind', context.get('pagekind', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         AUTHOR_DETAILS = _import_ns.get('AUTHOR_DETAILS', context.get('AUTHOR_DETAILS', UNDEFINED))
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        BANNER_URL = _import_ns.get('BANNER_URL', context.get('BANNER_URL', UNDEFINED))
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
+        def content():
+            return render_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n\n')
@@ -81,8 +81,8 @@ def render_extra_head(context,**pageargs):
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         def extra_head():
             return render_extra_head(context)
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
         kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(feeds_translations.head(author, kind, rss_override=False)))
@@ -97,16 +97,16 @@ def render_cover(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
-        def cover():
-            return render_cover(context)
-        post = _import_ns.get('post', context.get('post', UNDEFINED))
         pagekind = _import_ns.get('pagekind', context.get('pagekind', UNDEFINED))
-        blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
         AUTHOR_DETAILS = _import_ns.get('AUTHOR_DETAILS', context.get('AUTHOR_DETAILS', UNDEFINED))
         title = _import_ns.get('title', context.get('title', UNDEFINED))
-        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
+        blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
         BANNER_URL = _import_ns.get('BANNER_URL', context.get('BANNER_URL', UNDEFINED))
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
+        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
+        post = _import_ns.get('post', context.get('post', UNDEFINED))
+        def cover():
+            return render_cover(context)
         __M_writer = context.writer()
         __M_writer('\n')
         if 'main_index' in pagekind and BANNER_URL :
@@ -146,16 +146,16 @@ def render_content(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
+        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        AUTHOR_DETAILS = _import_ns.get('AUTHOR_DETAILS', context.get('AUTHOR_DETAILS', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         author = _import_ns.get('author', context.get('author', UNDEFINED))
         posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
         def content():
             return render_content(context)
-        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
-        AUTHOR_DETAILS = _import_ns.get('AUTHOR_DETAILS', context.get('AUTHOR_DETAILS', UNDEFINED))
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n<article class="authorpage">\n    <header>\n        <h1>')
         __M_writer(filters.html_escape(str(title.replace("Posts","Talks"))))
