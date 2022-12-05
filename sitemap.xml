@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://realworld-ml.xyz/</loc>
-  <lastmod>2022-11-23T16:16:00Z</lastmod>
+  <lastmod>2022-12-05T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/2022/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://realworld-ml.xyz/archive.html</loc>
-  <lastmod>2022-11-23T17:44:00Z</lastmod>
+  <lastmod>2022-12-05T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://realworld-ml.xyz/categories/</loc>
@@ -120,5 +120,9 @@
  <url>
   <loc>https://realworld-ml.xyz/time/</loc>
   <lastmod>2022-11-23T15:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://realworld-ml.xyz/videos/</loc>
+  <lastmod>2022-12-05T17:52:00Z</lastmod>
  </url>
 </urlset>
