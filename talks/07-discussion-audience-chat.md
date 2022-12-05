@@ -10,4 +10,6 @@
 .. author: Jesper Dramsch, Gemma Turon, Valerio Maggio, Goku Mohandas, Mike Walmsley
 -->
 
+{{% youtube K6sfwns7RTc %}}
+
 Time to discuss and take audience questions.

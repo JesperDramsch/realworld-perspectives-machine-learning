@@ -15,6 +15,8 @@ Check out the [talks](/talks), [speakers](/speaker), and [schedule](/schedule), 
 
 *🎫Get your [tickets here 🎫](/tickets/).*
 
+{{% playlist PLib5UZJfdkBBQXiJc0rHeH76jgxtqpsid %}}
+
 ## Description
 
 Numerous scientific disciplines have noticed a reproducibility crisis of published results. While this important topic was being addressed, the danger of non-reproducible and unsustainable research artefacts using machine learning in science arose. The brunt of this has been avoided by better education of reviewers who nowadays have the skills to spot insufficient validation practices. However, there is more potential to further ease the review process, improve collaboration and make results and models available to fellow scientists. This workshop will teach practical lessons that can be directly applied to elevate the quality of ML applications in science by scientists.

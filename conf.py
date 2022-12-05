@@ -147,7 +147,7 @@ NAVIGATION_LINKS = {
         ("/schedule/", "Schedule"),
         ("/speaker/", "Speakers"),
         ("/resources/", "Resources"),
-        ("/tickets/", "Pydata Tickets"),
+        ("/videos/", "Videos"),
     ),
 }
 
@@ -570,8 +570,8 @@ AUTHOR_PAGES_DESCRIPTIONS = {
         "Jesper Dramsch": "Jesper Dramsch works at the intersection of machine learning and physical, real-world data. Currently, they're working as a scientist for machine learning in numerical weather prediction at the coordinated organisation ECMWF.<br /><br />Before, Jesper has worked on applied exploratory machine learning problems, e.g. satellites and Lidar imaging on trains, and defended a PhD in machine learning for geoscience. During the PhD, Jesper wrote multiple publications and often presented at workshops and conferences, eventually holding keynote presentations on the future of machine learning.<br /><br />Moreover, they worked as consultant machine learning and Python educator in international companies and the UK government. Their courses on Skillshare have been watched over 30 days by over 4500 students. Additionally, they create educational notebooks on Kaggle, reaching rank 81 worldwide. Recently, Jesper was invited into the Youtube Partner programme.",
         "Valerio Maggio": 'Valerio Maggio is a Researcher, Data scientist, and fellow at the Software Sustainability Institute, as well as a casual "Magic: The Gathering" wizard. He holds a Ph.D. in Computer Science with a thesis on Machine Learning for Software Maintainability, and he is currently working in Anaconda, inc. as Senior Developer Advocate. Valerio is well versed into open source software, and best software development practice, specifically focusing on scalable and reproducible machine learning pipelines. Valerio is an active member of the Python community: over the years he has led the organisation of many international conferences like PyCon/PyData Italy/EuroPython, and EuroSciPy.',
         "Gemma Turon": "Trained as a molecular biologist, Gemma completed a PhD in colorectal cancer and stem cells at IRB Barcelona in 2019, before taking a one-year break to focus on working and volunteering in the third sector. This shifted her scientific interest to global health and neglected diseases, and the existing barriers to tackle some of the most urgent health issues in developing countries. With Ersilia, she aims to explore new ways of community building and engagement in the scientific arena, at the intersection between academia, biotech start-ups and NPOs.",
-        "Goku Mohandas": "",
-        "Mike Walmsley": "",
+        "Goku Mohandas": "🌏 Founder @MadeWithML <br/> 🍎 AI Research @Apple <br/> ⚕️ ML Lead @Ciitizen (acq.) <br/> 🎓 CS/ML @GeorgiaTech <br/> 🎓 Chem/Bio @JohnsHopkins",
+        "Mike Walmsley": "Postdoc using ML and citizen science to answer astrophysics questions. Lead data scientist for Galaxy Zoo.",
     },
 }
 
