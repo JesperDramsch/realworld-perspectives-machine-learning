@@ -20,7 +20,7 @@ The overview talk serves to set the scene and present different areas where rese
 
 This talk loosely covers the topics Jesper discussed in their Euroscipy tutorial which will be used for the interactive session here:
 
-[https://github.com/JesperDramsch/euroscipy-2022-ml-for-science-reproducibility-tutorial](https://github.com/JesperDramsch/euroscipy-2022-ml-for-science-reproducibility-tutorial) 
+[https://github.com/JesperDramsch/ml-for-science-reproducibility-tutorial](https://github.com/JesperDramsch/ml-for-science-reproducibility-tutorial) 
 
 Topics covered:
 
