@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1670266493.9169328
+_modified_time = 1670341554.5348852
 _enable_loop = True
 _template_filename = 'themes/canterville/templates/base.tmpl'
 _template_uri = 'base.tmpl'
@@ -37,34 +37,34 @@ def render_body(context,**pageargs):
         _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'header')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'footer')._populate(_import_ns, ['*'])
-        pagekind = _import_ns.get('pagekind', context.get('pagekind', UNDEFINED))
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
-        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
-        WORKSHOP_URL = _import_ns.get('WORKSHOP_URL', context.get('WORKSHOP_URL', UNDEFINED))
-        GHOST_URL = _import_ns.get('GHOST_URL', context.get('GHOST_URL', UNDEFINED))
-        def extra_js():
-            return render_extra_js(context._locals(__M_locals))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        HUGO_URL = _import_ns.get('HUGO_URL', context.get('HUGO_URL', UNDEFINED))
         blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
-        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
-        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
-        post = _import_ns.get('post', context.get('post', UNDEFINED))
-        header = _mako_get_namespace(context, 'header')
         def cover():
             return render_cover(context._locals(__M_locals))
-        HUGO_URL = _import_ns.get('HUGO_URL', context.get('HUGO_URL', UNDEFINED))
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        GITHUB_URL = _import_ns.get('GITHUB_URL', context.get('GITHUB_URL', UNDEFINED))
+        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
+        post = _import_ns.get('post', context.get('post', UNDEFINED))
+        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
+        WORKSHOP_URL = _import_ns.get('WORKSHOP_URL', context.get('WORKSHOP_URL', UNDEFINED))
         TWITTER_URL = _import_ns.get('TWITTER_URL', context.get('TWITTER_URL', UNDEFINED))
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
         footer = _mako_get_namespace(context, 'footer')
-        BANNER_URL = _import_ns.get('BANNER_URL', context.get('BANNER_URL', UNDEFINED))
-        base = _mako_get_namespace(context, 'base')
+        pagekind = _import_ns.get('pagekind', context.get('pagekind', UNDEFINED))
         template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
+        GITHUB_URL = _import_ns.get('GITHUB_URL', context.get('GITHUB_URL', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
+        def extra_js():
+            return render_extra_js(context._locals(__M_locals))
+        header = _mako_get_namespace(context, 'header')
         LINKEDIN_URL = _import_ns.get('LINKEDIN_URL', context.get('LINKEDIN_URL', UNDEFINED))
-        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
+        GHOST_URL = _import_ns.get('GHOST_URL', context.get('GHOST_URL', UNDEFINED))
+        base = _mako_get_namespace(context, 'base')
+        BANNER_URL = _import_ns.get('BANNER_URL', context.get('BANNER_URL', UNDEFINED))
+        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
+        set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -133,21 +133,21 @@ def render_cover(context,**pageargs):
         _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'header')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'footer')._populate(_import_ns, ['*'])
-        HUGO_URL = _import_ns.get('HUGO_URL', context.get('HUGO_URL', UNDEFINED))
         GITHUB_URL = _import_ns.get('GITHUB_URL', context.get('GITHUB_URL', UNDEFINED))
-        pagekind = _import_ns.get('pagekind', context.get('pagekind', UNDEFINED))
-        TWITTER_URL = _import_ns.get('TWITTER_URL', context.get('TWITTER_URL', UNDEFINED))
-        GHOST_URL = _import_ns.get('GHOST_URL', context.get('GHOST_URL', UNDEFINED))
-        WORKSHOP_URL = _import_ns.get('WORKSHOP_URL', context.get('WORKSHOP_URL', UNDEFINED))
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
         title = _import_ns.get('title', context.get('title', UNDEFINED))
+        HUGO_URL = _import_ns.get('HUGO_URL', context.get('HUGO_URL', UNDEFINED))
         blog_url = _import_ns.get('blog_url', context.get('blog_url', UNDEFINED))
-        BANNER_URL = _import_ns.get('BANNER_URL', context.get('BANNER_URL', UNDEFINED))
-        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
-        post = _import_ns.get('post', context.get('post', UNDEFINED))
-        LINKEDIN_URL = _import_ns.get('LINKEDIN_URL', context.get('LINKEDIN_URL', UNDEFINED))
         def cover():
             return render_cover(context)
+        LINKEDIN_URL = _import_ns.get('LINKEDIN_URL', context.get('LINKEDIN_URL', UNDEFINED))
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
+        post = _import_ns.get('post', context.get('post', UNDEFINED))
+        TWITTER_URL = _import_ns.get('TWITTER_URL', context.get('TWITTER_URL', UNDEFINED))
+        WORKSHOP_URL = _import_ns.get('WORKSHOP_URL', context.get('WORKSHOP_URL', UNDEFINED))
+        GHOST_URL = _import_ns.get('GHOST_URL', context.get('GHOST_URL', UNDEFINED))
+        BANNER_URL = _import_ns.get('BANNER_URL', context.get('BANNER_URL', UNDEFINED))
+        logo_url = _import_ns.get('logo_url', context.get('logo_url', UNDEFINED))
+        pagekind = _import_ns.get('pagekind', context.get('pagekind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         if 'main_index' in pagekind and BANNER_URL :
