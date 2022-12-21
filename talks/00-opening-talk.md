@@ -1,7 +1,7 @@
 <!--
 .. title: Opening Talk
 .. slug: opening-talk
-.. date: 2022-12-12 13:00:00 UTC+01:00
+.. date: 2022-12-02 13:00:00 UTC+01:00
 .. tags: 
 .. category: 
 .. link: 
