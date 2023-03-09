@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1671648221.7022662
+_modified_time = 1678402899.1173563
 _enable_loop = True
 _template_filename = 'themes/canterville/templates/base_helper.tmpl'
 _template_uri = 'base_helper.tmpl'
@@ -33,30 +33,30 @@ def render_html_headstart(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         comment_system_id = context.get('comment_system_id', UNDEFINED)
-        extra_head_data = context.get('extra_head_data', UNDEFINED)
-        favicons = context.get('favicons', UNDEFINED)
+        meta_generator_tag = context.get('meta_generator_tag', UNDEFINED)
+        description = context.get('description', UNDEFINED)
+        use_base_tag = context.get('use_base_tag', UNDEFINED)
         def html_feedlinks():
             return render_html_feedlinks(context)
-        is_rtl = context.get('is_rtl', UNDEFINED)
-        lang = context.get('lang', UNDEFINED)
-        description = context.get('description', UNDEFINED)
         permalink = context.get('permalink', UNDEFINED)
-        use_open_graph = context.get('use_open_graph', UNDEFINED)
-        theme_color = context.get('theme_color', UNDEFINED)
-        meta_generator_tag = context.get('meta_generator_tag', UNDEFINED)
-        blog_title = context.get('blog_title', UNDEFINED)
-        title = context.get('title', UNDEFINED)
-        use_cdn = context.get('use_cdn', UNDEFINED)
-        prevlink = context.get('prevlink', UNDEFINED)
-        twitter_card = context.get('twitter_card', UNDEFINED)
-        comment_system = context.get('comment_system', UNDEFINED)
         url_type = context.get('url_type', UNDEFINED)
-        abs_link = context.get('abs_link', UNDEFINED)
-        url_replacer = context.get('url_replacer', UNDEFINED)
-        use_base_tag = context.get('use_base_tag', UNDEFINED)
+        is_rtl = context.get('is_rtl', UNDEFINED)
         def html_stylesheets():
             return render_html_stylesheets(context)
+        comment_system = context.get('comment_system', UNDEFINED)
+        extra_head_data = context.get('extra_head_data', UNDEFINED)
+        theme_color = context.get('theme_color', UNDEFINED)
+        blog_title = context.get('blog_title', UNDEFINED)
+        favicons = context.get('favicons', UNDEFINED)
+        use_cdn = context.get('use_cdn', UNDEFINED)
+        abs_link = context.get('abs_link', UNDEFINED)
         nextlink = context.get('nextlink', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
+        url_replacer = context.get('url_replacer', UNDEFINED)
+        title = context.get('title', UNDEFINED)
+        twitter_card = context.get('twitter_card', UNDEFINED)
+        use_open_graph = context.get('use_open_graph', UNDEFINED)
+        prevlink = context.get('prevlink', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<!DOCTYPE html>\n<html ')
         __M_writer("prefix='")
@@ -145,7 +145,7 @@ def render_late_load_js(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_writer = context.writer()
-        __M_writer('\n    <script type="text/javascript" src="/assets/js/jquery.js"></script>\n    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>\n    <script type="text/javascript" src="/assets/js/index.js"></script>\n')
+        __M_writer('\n    <script type="text/javascript" src="/assets/js/jquery.js"></script>\n    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>\n    <script type="text/javascript" src="/assets/js/index.js"></script>\n    <script defer data-domain="realworld-ml.xyz" src="https://plausible.io/js/script.js"></script>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -167,13 +167,13 @@ def render_html_stylesheets(context):
 def render_html_feedlinks(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        generate_atom = context.get('generate_atom', UNDEFINED)
         sorted = context.get('sorted', UNDEFINED)
+        generate_atom = context.get('generate_atom', UNDEFINED)
         rss_link = context.get('rss_link', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
         generate_rss = context.get('generate_rss', UNDEFINED)
         translations = context.get('translations', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
-        len = context.get('len', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if rss_link:
@@ -213,11 +213,11 @@ def render_html_translations(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         sorted = context.get('sorted', UNDEFINED)
-        lang = context.get('lang', UNDEFINED)
-        translations = context.get('translations', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
         abs_link = context.get('abs_link', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    <ul class="translations">\n')
         for langname in sorted(translations):
@@ -237,6 +237,6 @@ def render_html_translations(context):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/canterville/templates/base_helper.tmpl", "uri": "base_helper.tmpl", "source_encoding": "utf-8", "line_map": {"16": 0, "21": 2, "22": 69, "23": 75, "24": 88, "25": 111, "26": 121, "32": 3, "61": 3, "62": 6, "63": 7, "64": 8, "65": 10, "66": 11, "67": 13, "68": 14, "69": 15, "70": 17, "71": 18, "72": 21, "73": 21, "74": 21, "75": 24, "76": 25, "77": 25, "78": 25, "79": 27, "80": 28, "81": 28, "82": 28, "83": 30, "84": 31, "85": 32, "86": 32, "87": 32, "88": 33, "89": 34, "90": 34, "91": 34, "92": 34, "93": 34, "94": 36, "95": 37, "96": 37, "97": 38, "98": 38, "99": 39, "100": 40, "101": 42, "102": 42, "103": 42, "104": 43, "105": 43, "106": 45, "107": 46, "108": 47, "109": 47, "110": 47, "111": 47, "112": 47, "113": 47, "114": 47, "115": 50, "116": 51, "117": 52, "118": 52, "119": 52, "120": 54, "121": 55, "122": 56, "123": 56, "124": 56, "125": 58, "126": 59, "127": 59, "128": 59, "129": 61, "130": 62, "131": 63, "132": 64, "133": 65, "134": 65, "135": 65, "136": 67, "137": 68, "138": 68, "144": 71, "148": 71, "154": 77, "159": 77, "160": 84, "161": 85, "167": 90, "178": 90, "179": 91, "180": 92, "181": 92, "182": 92, "183": 93, "184": 94, "185": 95, "186": 96, "187": 96, "188": 96, "189": 96, "190": 96, "191": 98, "192": 99, "193": 99, "194": 99, "195": 102, "196": 103, "197": 104, "198": 105, "199": 105, "200": 105, "201": 105, "202": 105, "203": 107, "204": 108, "205": 108, "206": 108, "212": 113, "222": 113, "223": 115, "224": 116, "225": 117, "226": 117, "227": 117, "228": 117, "229": 117, "230": 117, "231": 117, "232": 120, "238": 232}}
+{"filename": "themes/canterville/templates/base_helper.tmpl", "uri": "base_helper.tmpl", "source_encoding": "utf-8", "line_map": {"16": 0, "21": 2, "22": 69, "23": 76, "24": 89, "25": 112, "26": 122, "32": 3, "61": 3, "62": 6, "63": 7, "64": 8, "65": 10, "66": 11, "67": 13, "68": 14, "69": 15, "70": 17, "71": 18, "72": 21, "73": 21, "74": 21, "75": 24, "76": 25, "77": 25, "78": 25, "79": 27, "80": 28, "81": 28, "82": 28, "83": 30, "84": 31, "85": 32, "86": 32, "87": 32, "88": 33, "89": 34, "90": 34, "91": 34, "92": 34, "93": 34, "94": 36, "95": 37, "96": 37, "97": 38, "98": 38, "99": 39, "100": 40, "101": 42, "102": 42, "103": 42, "104": 43, "105": 43, "106": 45, "107": 46, "108": 47, "109": 47, "110": 47, "111": 47, "112": 47, "113": 47, "114": 47, "115": 50, "116": 51, "117": 52, "118": 52, "119": 52, "120": 54, "121": 55, "122": 56, "123": 56, "124": 56, "125": 58, "126": 59, "127": 59, "128": 59, "129": 61, "130": 62, "131": 63, "132": 64, "133": 65, "134": 65, "135": 65, "136": 67, "137": 68, "138": 68, "144": 71, "148": 71, "154": 78, "159": 78, "160": 85, "161": 86, "167": 91, "178": 91, "179": 92, "180": 93, "181": 93, "182": 93, "183": 94, "184": 95, "185": 96, "186": 97, "187": 97, "188": 97, "189": 97, "190": 97, "191": 99, "192": 100, "193": 100, "194": 100, "195": 103, "196": 104, "197": 105, "198": 106, "199": 106, "200": 106, "201": 106, "202": 106, "203": 108, "204": 109, "205": 109, "206": 109, "212": 114, "222": 114, "223": 116, "224": 117, "225": 118, "226": 118, "227": 118, "228": 118, "229": 118, "230": 118, "231": 118, "232": 121, "238": 232}}
 __M_END_METADATA
 """
